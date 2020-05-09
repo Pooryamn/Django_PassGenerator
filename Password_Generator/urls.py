@@ -17,4 +17,5 @@ from django.urls import path
 from Generator import views
 urlpatterns = [
     path('',views.home),
+    path('Poorya',views.Poorya),
 ]
