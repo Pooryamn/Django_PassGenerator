@@ -1,6 +1,21 @@
-This is the new Homepage
+<h1>Password Generator</h1>
+<h2>Written By : Poorya Mohammadi nasab</h2>
 
-<h2> Your Password is </h2>
-<h3>
-{{ password }}
-</h3>
+<form action="{% url 'password' %}">
+    <select name="length">
+
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+
+    </select>
+
+    <input type="Submit" value="Generate Password">
+
+    </input>
+</form>
