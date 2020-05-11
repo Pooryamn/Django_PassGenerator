@@ -31,3 +31,6 @@ def password(request):
         GenPass += random.choice(valid_Chars)
 
     return render(request,'generator/password.html',{'password':GenPass})
+
+def info(request):
+    return render(request,'generator/info.html')
