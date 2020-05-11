@@ -13,11 +13,21 @@ def password(request):
 
     GenPass = ''
 
-    LowerChars = string.ascii_lowercase
+    valid_Chars = string.ascii_lowercase #at first the only valid characters are lowercases
+
+    if (request.GET.get('UpperCase')):
+        valid_Chars += string.ascii_uppercase
     
-    lenght = 10
+    if (request.GET.get('Special')):
+        valid_Chars += '!@#$%&*():/?.-+<>'
+
+    if (request.GET.get('Numbers')):
+        valid_Chars += '0123456789'
+
+    
+    lenght = int(request.GET.get('length',12)) # get lenght from web
 
     for i in range(lenght):
-        GenPass += random.choice(LowerChars)
+        GenPass += random.choice(valid_Chars)
 
     return render(request,'generator/password.html',{'password':GenPass})
