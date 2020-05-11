@@ -1,5 +1,4 @@
 <h1>Password Generator</h1>
-<h2>Written By : Poorya Mohammadi nasab</h2>
 
 <form action="{% url 'password' %}">
     <select name="length">
@@ -34,5 +33,10 @@
 
 
     <input type="Submit" value="Generate Password">
+
+    <br>
+    <br>
+
+    <a href="{% url 'info' %}">About Us</a>
 
 </form>
