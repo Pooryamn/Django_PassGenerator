@@ -1,42 +1,37 @@
-<h1>Password Generator</h1>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<form action="{% url 'password' %}">
-    <select name="length">
+<div class="container text-center">
+    <h1>Password Generator</h1>
 
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12" selected="selected">12</option>
-        <option value="13">13</option>
+    <form action="{% url 'password' %}">
+        <select name="length">
 
-    </select>
-    <br>
-    <br>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="13">13</option>
 
-    <input type="checkbox" name='UpperCase'>UpperCase
+        </select>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <input type="checkbox" name='UpperCase'>UpperCase
+        <br>
+        <input type="checkbox" name='Numbers'>Numbers
+        <br>
+        <input type="checkbox" name='Special'>Special Characters
+        <br>
+        <br>
+        <input type="Submit" value="Generate Password">
 
-    <input type="checkbox" name='Numbers'>Numbers
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <a href="{% url 'info' %}">About Us</a>
 
-    <input type="checkbox" name='Special'>Special Characters
-
-    <br>
-    <br>
-
-
-    <input type="Submit" value="Generate Password">
-
-    <br>
-    <br>
-
-    <a href="{% url 'info' %}">About Us</a>
-
-</form>
+    </form>
+</div>
